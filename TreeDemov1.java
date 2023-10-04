@@ -98,10 +98,18 @@ class Node{
 	   /*
 	   a method to find the node in the tree
 	   with a smallest key
+      @param root root of the binary search tree
+      @return The min value in the binary search tree
 	   */
 	   public int getMin(Node root){
-         //implement in here
+         //go to leftmost value in the binarysearch tree
+         Node current = root;
+         while (current.left != null)
+         {
+            current = current.left;
+         }
 	      
+         return current.value;
 	   }
 	  
 	  
