@@ -87,10 +87,34 @@ class Node{
 	   /*
 	   a method to find the node in the tree
 	   with a specific value
+      @param root root of the binary search tree
+      @param key key that will be searched for
+      @return True if found and false if it isn't
 	   */
 	   public boolean find(Node root, int key){
-		 //implement in here
-		  
+		   //check if root is key
+         if (root == null)
+         {
+            return false;
+         }
+         if (root.value == key)
+         {
+            return true;
+         }
+         
+         //recursivly go through left subtree
+         boolean left = find(root.left, key);
+         
+         //check if it was found
+         if (left)
+         {
+            return true;
+         }
+         
+         //go through right subtree
+         boolean right = find(root.right,key);
+         
+         return right;
 	   }
 	   
 	   
