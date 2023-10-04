@@ -65,10 +65,20 @@ class Node{
 	   
 	   
 	   /*
-	   in-order traversal
+	   a method to print in-order traversal
+      @param root root of binary search tree
 	   */
 	   public void inOrderTraversal(Node root){
-	      //implement in here
+	      //recursively print in order
+         if (root == null)
+         {
+            return;
+         }
+         
+         inOrderTraversal(root.left);
+         System.out.println(root.value + ", ");
+         inOrderTraversal(root.right);
+         
 	   }
 	   
 	   
