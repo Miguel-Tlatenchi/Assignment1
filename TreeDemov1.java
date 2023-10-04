@@ -109,9 +109,18 @@ class Node{
 	   /*
 	   a method to find the node in the tree
 	   with a largest key
+      @param root root of the binary search tree
+      @return The max value in the binary search tree
 	   */
 	   public int getMax(Node root){
-         //implement in here
+         //go to rightmost value on the tree
+         Node current = root;
+         while (current.right != null)
+         {
+            current = current.right;
+         }
+         
+         return current.value;
 	   }
 	   
 	   
@@ -154,7 +163,7 @@ class Node{
 
 
 
-	public class TreeDemo{
+	public class TreeDemov1{
 	   public static void main(String[] args){
 	      BinarySearchTree t1  = new BinarySearchTree();
 	      t1.insert( 24);
