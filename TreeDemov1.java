@@ -74,11 +74,20 @@ class Node{
 	   
 	   
 	   /*
-	   post-order traversal
+	   a method to print post-order traversal
+      @param root root of binary search tree
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-         //implement in here
+         //recursively print post order
+         if (root == null)
+         {
+            return;
+         }
+         
+         postOrderTraversal(root.left);
+         postOrderTraversal(root.right);
+         System.out.println(root.value + ", ");
 		   
 	   }
 	   
