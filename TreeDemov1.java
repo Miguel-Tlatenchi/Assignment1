@@ -65,7 +65,7 @@ class Node{
             return;
          }
          
-         System.out.println(root.value + ", ");
+         System.out.print(root.value + ", ");
          preOrderTraversal(root.left);
          preOrderTraversal(root.right);
 		   
@@ -85,7 +85,7 @@ class Node{
          }
          
          inOrderTraversal(root.left);
-         System.out.println(root.value + ", ");
+         System.out.print(root.value + ", ");
          inOrderTraversal(root.right);
          
 	   }
@@ -106,7 +106,7 @@ class Node{
          
          postOrderTraversal(root.left);
          postOrderTraversal(root.right);
-         System.out.println(root.value + ", ");
+         System.out.print(root.value + ", ");
 		   
 	   }
 	   
